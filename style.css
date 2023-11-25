@@ -1,0 +1,172 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: block;
+  }
+  
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+  }
+  
+/* Background Slideshow Animation */
+@keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    95% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+   }
+   .slider .slide:nth-child(1) {
+    background-image: url("images/scott-webb-102825.jpg");
+    animation-delay: 0;
+  }
+  
+  .slider .slide:nth-child(2) {
+    background-image: url("images/exhibition-1863344_1920.jpg");
+    animation-delay: -2s;
+  }
+  
+  .slider .slide:nth-child(3) {
+    background-image: url("images/genoa-956405_1920.jpg");
+    animation-delay: -4s;
+  }
+  
+  .slider .slide:nth-child(4) {
+    background-image: url("images/learn-2405206_1920.jpg");
+    animation-delay: -6s;
+  }
+  
+  .slider .slide:nth-child(5) {
+    background-image: url("images/scientific-2040795_1280.jpg");
+    animation-delay: -8s;
+  } 
+  .slider a {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+  }  
+/* Header section */
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: 0px;
+}
+header .logo img {
+    width: 250px;
+    padding: 0px;
+    background-color: transparent;
+}
+.container .menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(248, 243, 243);
+    margin: 6px 0px;
+}
+.container .menu-icon {
+    padding-left: 60px;
+}
+.container {
+    height: 40px;
+    padding: 10px;
+    display: block;
+    position: relative;
+    align-items: center;
+    width: 150px;
+    background-color: #ca1013;
+}
+/* Title section */
+section .title {
+    display: inline;
+    position: absolute;
+    width: 500px;
+    margin-left: 50px;
+    padding-top: 50px;
+}
+.title h1 {
+    font-size: 50px;
+    color: green;
+}
+.title h1 span {
+    color: #ca1013;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+section .right-title {
+    display: block;
+    position: relative;
+    width: 400px;
+    height: auto;
+    float: right;
+    margin-top: 170px;
+    margin-right: 150px;
+}
+.right-title a {
+    text-decoration: underline;
+}
+.right-title a:hover {
+    color: rgb(208, 5, 5);
+    font-weight: bold;
+}
+.right-title h2 {
+    font-size: 22px;
+}
+section {
+   flex-grow: 1;
+}
+/* Footer section */
+footer {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .row-footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+footer h3 {
+    font-size: 11px;
+    font-weight: lighter;
+}
+footer h2 {
+    font-size: 13px;
+}
+footer .row-footer ul {
+    display: block;
+    position: relative;
+    margin-left: 130px;
+    margin-right: 70px;
+    color: white;
+}
+footer img {
+    width: 110px;
+}
