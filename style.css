@@ -1,5 +1,6 @@
 body {
-    height: 100vh;
+    box-sizing: border-box;
+    height: auto;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +8,7 @@ body {
 .slider {
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     position: absolute;
     display: block;
   }
@@ -79,24 +80,97 @@ header .logo img {
     padding: 0px;
     background-color: transparent;
 }
-.container .menu-icon div {
-    width: 35px;
-    height: 5px;
-    background-color: rgb(248, 243, 243);
-    margin: 6px 0px;
-}
-.container .menu-icon {
-    padding-left: 60px;
-}
-.container {
-    height: 40px;
-    padding: 10px;
-    display: block;
-    position: relative;
-    align-items: center;
-    width: 150px;
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #3431319e;
+    --background: rgb(7, 7, 7);
+    --hamburger-margin: 10px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  }
+  .hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
     background-color: #ca1013;
-}
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: 200px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    height: 60px;
+  }
+  
+  .hamburger-menu:has(input:focus-visible)::before,
+  .hamburger-menu:has(input:focus-visible)::after,
+  .hamburger-menu input:focus-visible {
+    border: 1px solid ;
+    box-shadow: 0 0 0 1px ;
+    
+  }
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
+    content: "";
+    width: 60px;
+    height: 7px;
+    background-color: white;
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+      rotate var(--animation-timing), translate var(--animation-timing),
+      background-color var(--animation-timing);
+  }
+  .hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+  }
+  .hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+  }
+  .hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+  }
+  .hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+  .sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 3rem;
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 200px;
+    min-height: 100vh;
+    display: none;
+  }
+  .sidebar li a {
+    font-size: 2vw;
+  }
+  .sidebar li {
+    list-style-type: none;
+    padding: 10px;
+  }
+  .sidebar a:hover {
+    background-color: #ca1013;
+    font-weight: bold;
+  }
+  .hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+    display: flex;
+  }
 /* Title section */
 section .title {
     display: inline;
@@ -106,12 +180,12 @@ section .title {
     padding-top: 50px;
 }
 .title h1 {
-    font-size: 50px;
+    font-size: 5vw;
     color: green;
 }
 .title h1 span {
     color: #ca1013;
-    font-size: 80px;
+    font-size: 8vw;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -126,17 +200,137 @@ section .right-title {
 }
 .right-title a {
     text-decoration: underline;
+    font-size: 2vw;
 }
 .right-title a:hover {
-    color: rgb(208, 5, 5);
+    background-color: #ca1013;
     font-weight: bold;
 }
-.right-title h2 {
-    font-size: 22px;
+.right-title li {
+    list-style-type: none;
+    padding: 10px;
 }
 section {
    flex-grow: 1;
 }
+main {
+    display: block;
+    position: relative;
+    margin-top: 450px;
+    background-color: #f9f4f4;
+    color: rgb(79, 66, 66);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.main-title {
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+.main-title h1 {
+    font-size: 5vw;   
+}
+.main-text {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.main-text p {
+    text-align: justify;
+    font-size: 2vw;
+    font-weight: lighter;
+}
+main img {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+button {
+    background-color: #ca1013;  
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+}
+main a {
+    font-weight: bold;
+}
+.explore {
+    background-color: green;
+    color: white;
+}
+.learn-more {
+    margin: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.learn-more a {
+    font-size: 2vw;
+}
+button:hover {
+    background-color: white;
+}
+button:hover a {
+    color: #ca1013;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 10px; 
+    height: auto;
+  }
+  .column img {
+    width: 100%;
+    padding-top: 110px;
+  }
+  .row {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  .column p {
+    font-size: 2vw;
+  }
+  .column h2 {
+    font-size: 3vw;
+  }
+  .news {
+    background-color: #ca1013;
+    color: white;
+  }
+  .column-news h2, p {
+    font-size: 1vw;
+    font-style: italic;
+  }
+  .column-news {
+    padding: 10px;
+    padding-left: 20px;
+  }
+  .column-news h2 {
+    text-decoration: underline;
+  }
+  
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 /* Footer section */
 footer {
     background-color: black;
@@ -145,7 +339,7 @@ footer {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 footer .row-footer {
     width: 100%;
