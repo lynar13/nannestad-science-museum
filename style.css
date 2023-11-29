@@ -78,7 +78,7 @@ header .logo img {
     padding: 0px;
     background-color: transparent;
 }
-
+/* Sidebar section */
 :root {
     --bar-width: 60px;
     --bar-height: 8px;
@@ -275,6 +275,7 @@ main a {
 }
 .learn-more a {
     font-size: 2vw;
+    text-decoration: none;
 }
 button:hover {
     background-color: white;

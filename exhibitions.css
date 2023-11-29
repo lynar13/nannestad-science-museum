@@ -1,0 +1,243 @@
+body {
+    box-sizing: border-box;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #f9f4f4;
+    overflow-x: hidden;
+}
+/* Header section */
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: 0px;
+}
+header .logo img {
+    width: 250px;
+    padding: 0px;
+    background-color: transparent;
+}
+/* Sidebar section */
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #0707079e;
+    --background: rgb(7, 7, 7);
+    --hamburger-margin: 10px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  }
+  .hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    position: relative;
+    background-color: #ca1013;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    height: 60px;
+  }
+  .hamburger-menu:has(input:focus-visible)::before,
+  .hamburger-menu:has(input:focus-visible)::after,
+  .hamburger-menu input:focus-visible {
+    border: 1px solid;
+    box-shadow: 0 0 0 1px ;
+    
+  }
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
+    content: "";
+    width: 60px;
+    height: 7px;
+    background-color: white;
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+      rotate var(--animation-timing), translate var(--animation-timing),
+      background-color var(--animation-timing);
+  }
+  .hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+  }
+  .hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+  }
+  .hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+  }
+  .hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+  .sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 150px;
+    min-height: 50vh;
+    display: none;
+    justify-content: center;
+    padding-top: 30px;
+    padding-right: 20px;
+  }
+  .sidebar li a {
+    font-size: 1.5vw;
+    color: white;
+  }
+  .sidebar li {
+    list-style-type: none;
+    padding: 10px;
+  }
+  .sidebar a:hover {
+    background-color: #ca1013;
+    font-weight: bold;
+  }
+  .hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+    display: flex;
+  }
+  /* Heading section */
+  section {
+    display: flex;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    align-items: center;
+  }
+  .heading {
+    background-color: green;
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+    margin-left: 30vw;
+  }
+  .heading h1 {
+    font-size: 3vw;
+  } 
+
+  /* Main content section */
+  main {
+    display: flex;
+    position: absolute;
+    margin-top: 250px;
+    color: black;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  main p {
+    color: rgb(79, 66, 66);
+    font-size: 2vw;
+  }
+  main h2 {
+    font-style: italic;
+    font-size: 3vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+ 
+  /* Slideshow section */
+  section .slider { 
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    height: auto; 
+    width: 100vw;
+    }
+
+   
+/* set the width of the slides div and animation. */
+.slider .slide {
+    position: absolute;
+    top: 150px;
+    width: 100vw;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+  }
+    
+/* creating the animation for the slideshow */
+@keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    95% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+   }
+   .slider .slide:nth-child(1) {
+    background-image: url("images/mavis-cw-164128.jpg");
+    animation-delay: 0;
+  }
+  
+  .slider .slide:nth-child(2) {
+    background-image: url("images/lab-512503_1920.jpg");
+    animation-delay: -2s;
+  }
+  .slider .slide:nth-child(3) {
+    background-image: url("images/exhibition-1863344_1920.jpg");
+    animation-delay: -4s;
+  }
+  
+  .slider .slide:nth-child(4) {
+    background-image: url("images/samuel-zeller-158996.jpg");
+    animation-delay: -6s;
+  }
+  
+  .slider .slide:nth-child(5) {
+    background-image: url("images/scientific-2040795_1280.jpg");
+    animation-delay: -8s;
+  } 
+  
+  .row {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 620px;
+    padding: 30px;
+  }
+  .row .image-row {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 50px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .row .image-row img {
+    padding: 20px;
+    width: 30%;
+    height: auto;
+  }
+  
+  
+  
