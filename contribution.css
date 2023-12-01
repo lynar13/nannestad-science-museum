@@ -125,8 +125,8 @@ header .logo img {
     display: flex;
   }
   
-  /* Heading section */
-  section {
+   /* Heading section */
+   section {
     padding: 100px 0;
    }
   .heading {
@@ -145,23 +145,53 @@ header .logo img {
     text-transform: uppercase;
   }
   h2 {
-    color: #ca1013;
+    color: rgb(47, 44, 44);
     font-size: 2.5vw;
   }
   p {
-    color: black;
-    font-size: 2vw;
-    line-height: 1.2;
+    color: rgb(47, 44, 44);
+    font-size: 1.5vw;
+    line-height: 1;
   }
-
-  /* Main section */
+  /* Main content */
   .container {
-    width: 70%;
-    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px; 
+  }
+  .row {
+    display: flex;
+    padding: 30px 50px;
+    margin-bottom: 50px;
+  }
+  .text {
+    align-items: center;
+    
+  }
+  .text h2 {
+    width: 60%;
+  }
+  .support {
+    background-color: #e7cccd;
+  }
+  .volunteer {
+    background-color: rgb(235, 232, 213);
+  }
+  .internships {
+    background-color: #e4d6d7;
   }
 
-   /* Clear floats after the columns */
-   .row:after {
+  /* Create equal two columns */
+  .column {
+    display: flex;
+    float: left;
+    width: 100%;
+    column-count: 1;
+  }
+  .column img {
+    width: 100%;
+  }
+  /* Clear floats after the columns */
+  .row:after {
     content: "";
     display: table;
     clear: both;
@@ -169,58 +199,44 @@ header .logo img {
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
-    .image-row {
+    .column {
       width: 100%;
     }
   }
-  .image-row {
-    display: block;
-    width: 45%;
-    float: left;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 7px;
-  }
-  div.image-row img {
-    width: 100%;
-    height: auto;
-    border: 10px solid #ca1013;
-  }
   
 
-
-  /* Footer section */
+   /* Footer section */
 footer {
-    background-color: black;
-    width: 100%;
-    height: auto;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+  background-color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 footer .row-footer {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 footer h3 {
-    font-size: 11px;
-    font-weight: lighter;
+  font-size: 11px;
+  font-weight: lighter;
 }
 footer h2 {
-    font-size: 13px;
-    color: white;
+  font-size: 13px;
+  color: white;
 }
 footer a {
-    color: white;
+  color: white;
 }
 footer .row-footer ul {
-    display: block;
-    position: relative;
-    margin-left: 130px;
-    margin-right: 70px;
+  display: block;
+  position: relative;
+  margin-left: 130px;
+  margin-right: 70px;
 }
 footer img {
-    width: 110px;
+  width: 110px;
 }

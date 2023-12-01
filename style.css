@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
 body {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     height: auto;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
+}
+.back-to-top a{
+    color: #ca1013;
+    position: fixed;
+    bottom: 150px;
+    z-index: 999;
+    right: 10px;
+    padding: 10px;
 }
 div .slider {
     overflow: hidden;
     width: 100vw;
-    height: auto;
+    height: 100vh;
     position: absolute;
     display: block;
   }
@@ -17,7 +27,7 @@ div .slider {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -45,7 +55,7 @@ div .slider {
   }
   
   .slider .slide:nth-child(2) {
-    background-image: url("images/exhibition-1863344_1920.jpg");
+    background-image: url("images/toa-heftiba-412579.jpg");
     animation-delay: -2s;
   }
   
@@ -170,6 +180,7 @@ header .logo img {
     display: flex;
   }
 /* Title section */
+
 section .title {
     display: inline;
     position: absolute;
@@ -199,6 +210,7 @@ section .right-title {
 .right-title a {
     text-decoration: underline;
     font-size: 2vw;
+    
 }
 .right-title a:hover {
     background-color: #ca1013;
@@ -214,12 +226,13 @@ section {
 main {
     display: block;
     position: relative;
-    margin-top: 450px;
+    margin-top: 440px;
     background-color: #f9f4f4;
     color: rgb(79, 66, 66);
     align-items: center;
     justify-content: center;
     padding: 50px;
+    height: 100%;
 }
 .main-title {
     display: flex;
@@ -276,9 +289,10 @@ main a {
 .learn-more a {
     font-size: 2vw;
     text-decoration: none;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
 }
 button:hover {
-    background-color: white;
+    background-color: green;
 }
 button:hover a {
     color: #ca1013;
@@ -303,9 +317,11 @@ button:hover a {
   }
   .column p {
     font-size: 2vw;
+    line-height: 1.2;
   }
   .column h2 {
     font-size: 3vw;
+    color: #ca1013;
   }
   .news {
     background-color: #ca1013;
@@ -342,6 +358,9 @@ button:hover a {
       width: 100%;
     }
   }
+
+  
+  
 /* Footer section */
 footer {
     background-color: black;
