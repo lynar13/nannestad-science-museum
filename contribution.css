@@ -129,12 +129,16 @@ header .logo img {
    section {
     padding: 100px 0;
    }
+   .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+   }
   .heading {
     background-color: green;
     display: flex;
-    position: relative;
     justify-content: center;
-    padding: 50px;
     width: 100%;
     align-items: center;
   }

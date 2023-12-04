@@ -135,9 +135,11 @@ header .logo img {
     display: flex;
     position: relative;
     justify-content: center;
-    padding: 30px;
     width: 100%;
     align-items: center;
+  }
+  .title {
+    display: flex;
   }
   .hero-title {
     display: flex;
