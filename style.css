@@ -7,14 +7,7 @@ body {
     padding: 0;
     font-family: 'Lilita One', Arial, Helvetica, sans-serif;
 }
-.back-to-top a{
-    color: #ca1013;
-    position: fixed;
-    bottom: 150px;
-    z-index: 999;
-    right: 10px;
-    padding: 10px;
-}
+
 div .slider {
     overflow: hidden;
     width: 100vw;
@@ -350,7 +343,7 @@ main a {
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
-    margin: 10px 0px;
+    margin: 50px 0px;
   }
   .column p {
     font-size: 2vw;
@@ -364,22 +357,20 @@ main a {
   .news {
     background-color: #ca1013;
     color: white;
-    margin: 50px 0;
     padding: 50px 700px;
   }
   .text-news {
     border: 5px solid #ca1013;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 80%;
     padding-top: 30px;
+    display: flex;
+    margin-left: 70px;
   }
   .column-news h3 {
     color: #ca1013;
     font-size: 1vw;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     text-decoration: underline;
   }
   .column-news p{
@@ -389,9 +380,6 @@ main a {
     font-style: italic;
     padding: 10px;
   }
-  
-  
-  
   
   /* Clear floats after the columns */
   .row:after {
@@ -407,7 +395,50 @@ main a {
     }
   }
 
-  
+ 
+
+/* Sticky Icons */
+.icons {
+    display: grid;
+    position: fixed;
+    bottom: 150px;
+    right: 2.5vw;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 5vw;  
+    line-height: 2;
+    text-transform: none;
+    word-wrap: break-word;
+    white-space: nowrap;
+    direction: ltr;
+    
+    
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.icons a {
+    text-decoration: none;
+}
+
+ /* Scroll to top button */
+ .back-to-top a{
+    color: #ca1013;
+    position: fixed;
+    bottom: 50px;
+    z-index: 999;
+    right: 10px;
+    padding: 10px;
+}
   
 /* Footer section */
 footer {
