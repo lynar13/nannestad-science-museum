@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
-body {  
+body { 
     scroll-behavior: smooth; 
     height: auto;
     padding: 0;
@@ -9,6 +9,7 @@ body {
     background-color: #f9f4f4;
     overflow-x: hidden;   
 }
+/* Scroll to top button */
 .back-to-top a{
     color: #ca1013;
     position: fixed;
@@ -17,7 +18,8 @@ body {
     right: 10px;
     padding: 10px;
 }
-/* Header section */
+
+/* Header / Navigation section */
 header {
     display: flex;
     position: relative;
@@ -124,60 +126,43 @@ header .logo img {
     translate: 0;
     display: flex;
   }
-  
-   /* Heading section */
-   section {
-    padding: 100px 0;
-   }
-  .heading {
-    background-color: green;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    padding: 50px;
-    width: 100%;
-    align-items: center;
+
+  /* Main content section */
+  main {
+    display: block;
+    color: rgb(47, 44, 44);
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 170px;
   }
   h1 {
-    color: white;
+    font-size: 2.2vw;
     font-weight: bold;
-    font-size: 5vw;
-    text-transform: uppercase;
   }
-  
-  /* Main content */
   h2 {
-    font-size: 2.5vw;
-    color: green;
+    font-size: 1.5vw;
   }
   p {
-    font-size: 1.5vw;
-    line-height: 1.2;
+    font-size: 1vw;
   }
-  .support-img img {
-    height: 400px;
-    width: 100%;
+  .heading {
+    line-height: 0.2;  
   }
-  .container {
-    width: 70%;
-    margin: 0 auto;
-    color: #1f1d1d;
-    position: relative;
+  .heading p {
+    font-style: italic;
   }
-  .support {
-    background-color: #f9f4f4;
-  }
-  .volunteer {
-    background-color: rgb(235, 232, 213);
-  }
-  .internships {
-    background-color: #e4d6d7;
-  }
+ section {
+    padding: 3px 0;
+ }
+ .list {
+    font-size: 1vw;
+ }
+ .text span {
+    color: #ca1013;
+    font-style: italic;
+    font-weight: bold;
+ }
 
-  
-  
-
-  /* Footer section */
+   /* Footer section */
 footer {
   background-color: black;
   width: 100%;

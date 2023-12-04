@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
-body {  
-    scroll-behavior: smooth; 
+body {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
     height: auto;
-    padding: 0;
     margin: 0;
-    color: white;
-    font-family: 'Lilita One', sans-serif;
-    background-color: #f9f4f4;
-    overflow-x: hidden;   
+    padding: 0;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
 }
 .back-to-top a{
     color: #ca1013;
@@ -17,14 +15,76 @@ body {
     right: 10px;
     padding: 10px;
 }
+div .slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: block;
+  }
+  
+  .slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: slide 10s infinite;
+  }
+  
+/* Background Slideshow Animation */
+@keyframes slide {
+    0%, 15%, 100% {
+      transform: translateX(0);
+      animation-timing-function: ease;
+    }
+    20% {
+      transform: translateX(-100%);
+      animation-timing-function: step-end;
+    }
+    95% {
+      transform: translateX(100%);
+      animation-timing-function: ease;
+    }
+   }
+   .slider .slide:nth-child(1) {
+    background-image: url("images/scott-webb-102825.jpg");
+    animation-delay: 0;
+  }
+  
+  .slider .slide:nth-child(2) {
+    background-image: url("images/library-1132573_1920.jpg");
+    animation-delay: -2s;
+  }
+  
+  .slider .slide:nth-child(3) {
+    background-image: url("images/exhibition-1863344_1920.jpg");
+    animation-delay: -4s;
+  }
+  
+  .slider .slide:nth-child(4) {
+    background-image: url("images/learn-2405206_1920.jpg");
+    animation-delay: -6s;
+  }
+  
+  .slider .slide:nth-child(5) {
+    background-image: url("images/lab-512503_1920.jpg");
+    animation-delay: -8s;
+  } 
+  a {
+    color: white;
+  }
 /* Header section */
 header {
     display: flex;
     position: relative;
     justify-content: space-between;
+    margin-right: 0px;
 }
 header .logo img {
-    width: 20vw;
+    width: 250px;
     padding: 0px;
     background-color: transparent;
 }
@@ -33,7 +93,7 @@ header .logo img {
     --bar-width: 60px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
-    --foreground: #0c0b0bf3;
+    --foreground: #3431319e;
     --background: rgb(7, 7, 7);
     --hamburger-margin: 10px;
     --animation-timing: 200ms ease-in-out;
@@ -42,22 +102,21 @@ header .logo img {
   .hamburger-menu {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
     display: flex;
-    position: relative;
     background-color: #ca1013;
     flex-direction: column;
     gap: var(--hamburger-gap);
-    width: 200px;
+    width: 20vw;
+    position: relative;
     justify-content: center;
     align-items: center;
     z-index: 2;
     cursor: pointer;
-    height: 70px;
-    
+    height: 60px;
   }
   .hamburger-menu:has(input:focus-visible)::before,
   .hamburger-menu:has(input:focus-visible)::after,
   .hamburger-menu input:focus-visible {
-    border: 1px solid;
+    border: 1px solid ;
     box-shadow: 0 0 0 1px ;
     
   }
@@ -98,19 +157,15 @@ header .logo img {
   .sidebar {
     transition: translate var(--animation-timing);
     translate: -100%;
+    padding: 3rem;
     background-color: var(--foreground);
     color: var(--background);
-    max-width: 150px;
-    min-height: 50vh;
+    max-width: 200px;
+    min-height: 100vh;
     display: none;
-    justify-content: center;
-    padding-top: 20px;
-    padding-right: 20px;
   }
   .sidebar li a {
-    font-size: 1.7vw;
-    color: white;
-    text-decoration: none;
+    font-size: 2vw;
   }
   .sidebar li {
     list-style-type: none;
@@ -124,10 +179,10 @@ header .logo img {
     translate: 0;
     display: flex;
   }
-  
-   /* Heading section */
+
+   /* Title section */
    section {
-    padding: 100px 0;
+    padding: 100px 100px;
    }
   .heading {
     background-color: green;
@@ -137,6 +192,7 @@ header .logo img {
     padding: 50px;
     width: 100%;
     align-items: center;
+    margin-top: 30px;
   }
   h1 {
     color: white;
@@ -144,73 +200,72 @@ header .logo img {
     font-size: 5vw;
     text-transform: uppercase;
   }
-  
-  /* Main content */
   h2 {
+    color: #ca1013;
     font-size: 2.5vw;
-    color: green;
   }
   p {
+    color: rgb(47, 44, 44);
     font-size: 1.5vw;
     line-height: 1.2;
   }
-  .support-img img {
-    height: 400px;
-    width: 100%;
+  .content {
+    padding: 30px 100px;
   }
-  .container {
-    width: 70%;
-    margin: 0 auto;
-    color: #1f1d1d;
-    position: relative;
+  /* Content section */
+  .visit {
+   background-color: #ca1013;
+   margin-top: 40px;
   }
-  .support {
-    background-color: #f9f4f4;
+  .first {
+    color: green;
+    font-style: italic;
   }
-  .volunteer {
-    background-color: rgb(235, 232, 213);
+  .second {
+    color: #ca1013;
+    font-style: italic;
   }
-  .internships {
-    background-color: #e4d6d7;
+  span {
+    color: green;
+    text-decoration: underline;
+  }
+  .text img {
+    width: 400px;
+    height: 300px;
   }
 
-  
-  
-
-  /* Footer section */
+ /* Footer section */
 footer {
-  background-color: black;
-  width: 100%;
-  height: auto;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-footer a {
-  color: white;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 footer .row-footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 footer h3 {
-  font-size: 11px;
-  font-weight: lighter;
+    font-size: 11px;
+    font-weight: lighter;
 }
 footer h2 {
-  font-size: 13px;
-  color: white;
+    font-size: 13px;
+    color: white;
 }
 footer .row-footer ul {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
+    color: white;
 }
 footer img {
-  width: 110px;
+    width: 110px;
 }

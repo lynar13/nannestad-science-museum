@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
-body {  
-    scroll-behavior: smooth; 
+body {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
     height: auto;
-    padding: 0;
     margin: 0;
-    color: white;
-    font-family: 'Lilita One', sans-serif;
-    background-color: #f9f4f4;
-    overflow-x: hidden;   
+    padding: 0;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
 }
+/* Scroll to top button */
 .back-to-top a{
     color: #ca1013;
     position: fixed;
@@ -17,7 +16,7 @@ body {
     right: 10px;
     padding: 10px;
 }
-/* Header section */
+ /* Header / Navigation section */
 header {
     display: flex;
     position: relative;
@@ -46,7 +45,7 @@ header .logo img {
     background-color: #ca1013;
     flex-direction: column;
     gap: var(--hamburger-gap);
-    width: 200px;
+    width: 20vw;
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -124,93 +123,114 @@ header .logo img {
     translate: 0;
     display: flex;
   }
+
+
+  /* Contact Form */
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
   
-   /* Heading section */
-   section {
-    padding: 100px 0;
-   }
-  .heading {
+  input[type=submit] {
     background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #ca1013;
+    padding: 100px;
+    margin: 120px;
+  }
+  .heading {
     display: flex;
     position: relative;
     justify-content: center;
-    padding: 50px;
-    width: 100%;
-    align-items: center;
+    margin: 0;
   }
   h1 {
-    color: white;
-    font-weight: bold;
     font-size: 5vw;
-    text-transform: uppercase;
-  }
-  
-  /* Main content */
-  h2 {
-    font-size: 2.5vw;
     color: green;
   }
-  p {
-    font-size: 1.5vw;
-    line-height: 1.2;
-  }
-  .support-img img {
-    height: 400px;
-    width: 100%;
-  }
-  .container {
-    width: 70%;
-    margin: 0 auto;
-    color: #1f1d1d;
-    position: relative;
-  }
-  .support {
-    background-color: #f9f4f4;
-  }
-  .volunteer {
-    background-color: rgb(235, 232, 213);
-  }
-  .internships {
-    background-color: #e4d6d7;
+  label {
+    color: white;
   }
 
-  
-  
+   /* Content section */
+   section {
+    padding: 30px 100px;
+   }
+   .visit {
+    
+   }
+   .first {
+     color: green;
+     font-style: italic;
+   }
+   .second {
+     color: #ca1013;
+     font-style: italic;
+   }
+   span {
+     color: green;
+     text-decoration: underline;
+   }
+   .text img {
+     width: 400px;
+     height: 300px;
+   }
 
-  /* Footer section */
+ /* Footer section */
 footer {
-  background-color: black;
-  width: 100%;
-  height: auto;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  float: left;
-  margin: 0;
-  padding: 0;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 footer a {
-  color: white;
+    color: white;
 }
 footer .row-footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 footer h3 {
-  font-size: 11px;
-  font-weight: lighter;
+    font-size: 11px;
+    font-weight: lighter;
 }
 footer h2 {
-  font-size: 13px;
-  color: white;
+    font-size: 13px;
+    color: white;
 }
 footer .row-footer ul {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 footer img {
-  width: 110px;
+    width: 110px;
 }

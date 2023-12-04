@@ -127,46 +127,96 @@ header .logo img {
   
   /* Heading section */
   section {
-    padding: 100px 0;
+    padding: 5vw;
+    margin: 0;
    }
   .heading {
     background-color: green;
     display: flex;
     position: relative;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
     width: 100%;
+    align-items: center;
+  }
+  .hero-title {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   h1 {
     color: white;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 5vw;
     text-transform: uppercase;
   }
   h2 {
     color: #ca1013;
-    font-size: 2.5vw;
+    font-size: 3vw;
+  }
+  h3 {
+    font-size: 2vw;
+    color: green;
+    
   }
   p {
     color: black;
-    font-size: 2vw;
+    font-size: 1.5vw;
     line-height: 1.2;
+  }
+
+  .text {
+    display: flex;
+    font-style: italic;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 6vw;
+    color: #ca1013;
+    padding: 20px 20px;
+  }
+  .hero span {
+    color: green;
+  }
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
   }
 
   /* Main section */
   .container {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-   /* Clear floats after the columns */
-   .row:after {
-    content: "";
-    display: table;
-    clear: both;
+    padding: 50px 50px;
   }
   
+  .container img {
+    margin-left: 10px;
+  }
+  .hero {
+    background-image: url('images/lab-512503_1920.jpg');
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .row {
+    border: 6px solid #ca1013;
+    border-radius: 10px;
+    display: block;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .news {
+    padding: 50px;
+  }
+  .news p {
+    font-size: 1.2vw;
+  }
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .image-row {
@@ -179,7 +229,7 @@ header .logo img {
     float: left;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 7px;
+    padding: 40px 10px;
   }
   div.image-row img {
     width: 100%;
@@ -198,28 +248,31 @@ footer {
     position: relative;
     align-items: center;
     justify-content: center;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+footer a {
+    color: white;
 }
 footer .row-footer {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 footer h3 {
     font-size: 11px;
     font-weight: lighter;
+    color: white;
 }
 footer h2 {
     font-size: 13px;
     color: white;
 }
-footer a {
-    color: white;
-}
 footer .row-footer ul {
     display: block;
     position: relative;
-    margin-left: 130px;
-    margin-right: 70px;
 }
 footer img {
     width: 110px;

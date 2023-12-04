@@ -76,7 +76,7 @@ div .slider {
   a {
     color: white;
   }
-/* Header section */
+/* Header/Nav section */
 header {
     display: flex;
     position: relative;
@@ -179,7 +179,7 @@ header .logo img {
     translate: 0;
     display: flex;
   }
-/* Title section */
+/* Slide Title section */
 
 section .title {
     display: inline;
@@ -223,6 +223,8 @@ section .right-title {
 section {
    flex-grow: 1;
 }
+
+/* Main content */
 main {
     display: block;
     position: relative;
@@ -232,21 +234,22 @@ main {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    height: 100%;
+    
 }
 .main-title {
     display: flex;
-    color: black;
+    color: green;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
+
 .main-title h1 {
-    font-size: 5vw;   
+    font-size: 5vw; 
+    text-transform: uppercase;  
 }
 .main-text {
     display: block;
-    justify-content: center;
-    align-items: center;
 }
 .main-text p {
     text-align: justify;
@@ -263,57 +266,91 @@ span {
 }
 main img {
     max-width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
     padding-top: 50px;
 }
-button {
-    background-color: #ca1013;  
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-}
+
 main a {
     font-weight: bold;
 }
 .explore {
-    background-color: green;
     color: white;
-}
-.learn-more {
-    margin: 80px;
-    align-items: center;
-    justify-content: center;
+    background-color: green;
+    margin: 50px 0;
+    padding: 50px 700px;
 }
 .learn-more a {
     font-size: 2vw;
     text-decoration: none;
     font-family: 'Lilita One', Arial, Helvetica, sans-serif;
 }
-button:hover {
-    background-color: green;
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
 }
-button:hover a {
-    color: #ca1013;
-}
+.learn-more {
+    border-radius: 20px;
+    background-color: #ca1013;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2vw;
+    padding: 20px;
+    width: 20vw;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .learn-more span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #ffffff;
+  }
+  
+  .learn-more span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .learn-more:hover span {
+    padding-right: 25px;
+  }
+  
+  .learn-more:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 /* Create two equal columns that floats next to each other */
 .column {
     display: block;
     float: left;
     width: 50%;
-    padding: 10px; 
+    padding: 20px; 
     height: auto;
   }
   .column img {
     width: 100%;
-    padding-top: 110px;
   }
   .row {
+    border: 5px solid green;
+    border-radius: 10px;
     display: flex;
-    padding: 50px;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 10px 0px;
+    margin: 10px 0px;
   }
   .column p {
     font-size: 2vw;
@@ -323,25 +360,36 @@ button:hover a {
     font-size: 3vw;
     color: #ca1013;
   }
+  
   .news {
     background-color: #ca1013;
     color: white;
+    margin: 50px 0;
+    padding: 50px 700px;
   }
-  .column-news h2 {
+  .text-news {
+    border: 5px solid #ca1013;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 30px;
+  }
+  .column-news h3 {
+    color: #ca1013;
     font-size: 1vw;
-    font-style: italic;
+    justify-content: center;
+    display: flex;
+    text-decoration: underline;
   }
   .column-news p{
-    font-style: italic;
     font-size: 1vw;
   }
   .column-news {
+    font-style: italic;
     padding: 10px;
-    padding-left: 20px;
   }
-  .column-news h2 {
-    text-decoration: underline;
-  }
+  
   
   
   
@@ -370,12 +418,15 @@ footer {
     position: relative;
     align-items: center;
     justify-content: center;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 footer .row-footer {
     width: 100%;
     display: flex;
-    position: relative;
     align-items: center;
+    justify-content: space-evenly;
 }
 footer h3 {
     font-size: 11px;
@@ -387,8 +438,6 @@ footer h2 {
 footer .row-footer ul {
     display: block;
     position: relative;
-    margin-left: 130px;
-    margin-right: 70px;
     color: white;
 }
 footer img {
