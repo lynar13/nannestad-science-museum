@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'Lilita One', sans-serif;
+  font-family: 'Lilita One', Arial, Helvetica, sans-serif;
   overflow-x: hidden;   
 }
 
@@ -44,7 +44,6 @@ header .logo img {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
     display: flex;
     position: relative;
-    background-color: #ca1013;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: 200px;
@@ -129,19 +128,21 @@ header .logo img {
   
    /* Heading section */
    section {
-      padding: 30px 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
    }
    .title {
       justify-content: center;
-      padding: 0;
+      padding: 50px;
+   }
+   .title {
+    font-size: 4vw;
    }
   .heading {
       display: block;
       width: 100%;
-      
   }
   h1 {
     display: flex;
@@ -172,6 +173,7 @@ header .logo img {
     margin: 0 auto;
     color: #1f1d1d;
     position: relative;
+    padding: 50px;
   }
   .support {
     background-color: #f9f4f4;
@@ -343,7 +345,10 @@ footer h3 {
   font-size: 1.3vw;
   color: white;
 }
-
+footer li {
+  list-style-type: none;
+}
 footer img {
-  width: 5vw;
+  width: 10vw;
+  height: 100%;
 }

@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
     color: white;
-    font-family: 'Lilita One', sans-serif;
+    font-family: 'Lilita One', Arial, Helvetica, sans-serif;
     background-color: #f9f4f4;
     overflow-x: hidden;   
 }
@@ -46,7 +46,6 @@ header .logo img {
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
     display: flex;
     position: relative;
-    background-color: #ca1013;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: 200px;
@@ -104,7 +103,7 @@ header .logo img {
     background-color: var(--foreground);
     color: var(--background);
     max-width: 150px;
-    min-height: 70vh;
+    min-height: 60vh;
     display: none;
     justify-content: center;
     padding-top: 20px;
@@ -134,6 +133,7 @@ header .logo img {
     color: rgb(47, 44, 44);
     font-family: 'Open Sans', sans-serif;
     padding: 30px 170px;
+    margin-bottom: 50px;
   }
   h1 {
     font-size: 5vw;
@@ -326,7 +326,10 @@ footer h3 {
   font-size: 1.3vw;
   color: white;
 }
-
+footer li {
+  list-style-type: none;
+}
 footer img {
-  width: 5vw;
+  width: 10vw;
+  height: 100%;
 }
