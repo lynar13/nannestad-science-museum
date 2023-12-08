@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the About page">
     <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>About Us</title>
 </head>
 <body id="body">
@@ -16,15 +18,15 @@
         <div class="slide"></div>
     </div>
 
-<header>
-    <div class="logo">
-    <img src="images/NSM-Logo-transformed.png" alt="logo">
-    </div>
-    <label class="hamburger-menu">
-        <input type="checkbox"/>
-    </label>
-    <div class="sidebar">
-        <nav>
+    <header>
+        <div class="logo">
+        <img src="images/nsm-logo1.png" alt="logo">
+        </div>
+        <h1 class="header-title">Nannestad Science Museum</h1>
+        <label class="hamburger-menu">
+            <input type="checkbox"/>
+        </label>
+        <nav class="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="exhibitions.html">Exhibitions</a></li>
@@ -35,20 +37,8 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    </div>
-</header>
-<section>
-    <div class="title">
-    <h1>Nannestad<br><span>Science Museum</span></h1>
-    </div> 
-    <div class="right-title">
-        <ul>
-            <li><a href="about.html">Plan your visit</a></li>
-            <li><a href="exhibitions.html">Discover our Exhibitions</a></li>
-            <li><a href="contribution.html">Contribute for our growth</a></li>
-        </ul>    
-    </div>
-</section>
+    </header>
+
 <main>
     <div class="heading">
         <h1>About &nbsp Us</h1>
@@ -124,30 +114,41 @@
 </main>
 <footer>
     <div class="row-footer">
-        <div class="col-1">
         <ul>
-            <a href="contact.html"><h3>Plan a visit</h3></a>
-            <a href="exhibitions.html"><h3>Exhibitions</h3></a>
-            <a href="contribution.html"><h3>Contributions</h3></a>
+            <h2>Follow Nannestad Science Museum</h2>
+            <a class="socmed" href="#" title="Facebook Page">
+                <img src="images/socmed-icons.png" alt="">
+            </a>
         </ul>
-        </div>
-        <div class="col-1"></div>
-        <ul>
-            <a href="privacy.html"><h3>Privacy Policy</h3></a>
-            <a href="terms.html"><h3>Terms and Conditions</h3></a>
-            <a href="contact.html"><h3>Need help?</h3></a>
-        </ul>
-        <div class="col-1">
-            <ul>
-                <h2>Follow Nannestad Science Museum</h2>
-                <img src="images/socmed-icons.png" alt="facebook">
-            </ul>
-        </div>
     </div> 
 </footer>
-<div class="back-to-top">
-    <a href="#body">Back to Top</a>
-</div>
 
+<div class="icons">
+    <a class="home" href="index.html" title="Home">
+    <span class="material-icons-round">
+        home
+    </span>
+    </a>
+    
+    <a class="call" href="contact.html" title="Contact Us">
+    <span class="material-icons-round">
+    phone
+    </span>
+    </a>
+
+    <a class="search" href="#" title="Search">
+        <span class="material-icons-round">
+            search
+        </span>
+        </a>
+
+    <div class="material-icons">
+    <a href="#body" title="Back to Top">
+        <span class="material-symbols-outlined">
+            arrow_upward
+        </span>
+    </a>
+    </div>
+</div>
 </body>
 </html>

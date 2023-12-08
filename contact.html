@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the Contact Page">
     <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Contact Us</title>
 </head>
 <body id="body">
     <header>
         <div class="logo">
-        <img src="images/NSM-Logo-transformed.png" alt="logo">
+        <img src="images/nsm-logo1.png" alt="logo">
         </div>
+        <h1 class="header-title">Nannestad Science Museum</h1>
         <label class="hamburger-menu">
             <input type="checkbox"/>
         </label>
@@ -28,14 +31,14 @@
         </nav>
     </header>
     <main>
-        <div class="heading visit">
+        <div class="heading title-1">
             <h1>Visit &nbsp Us</h1>
         </div>
         
-        <section class="text">
+        <section class="text content">
             <h2>Location</h2>
             <p>The museum is located at Lynveien 13, 2032 Nannestad, Norway.</p>
-            <a target="_blank" href="images/map.jpeg" aria-label="Click to zoom">
+            <a target="_blank" href="https://rb.gy/tv5lx5" title="Click to show location">
                 <img src="images/map.jpeg" alt="map">
             </a>
         </section>
@@ -78,7 +81,10 @@
                 the museum.
             </p>
         </section>
-        <h1 class="heading">Contact Us</h1>
+
+        <div class="heading contact">
+            <h1>Contact Us</h1>
+        </div>
 
         <div class="container">
         <form action="/action_page.php">
@@ -102,29 +108,41 @@
     </main>
     <footer>
         <div class="row-footer">
-            <div class="col-1">
             <ul>
-                <a href="contact.html"><h3>Plan a visit</h3></a>
-                <a href="exhibitions.html"><h3>Exhibitions</h3></a>
-                <a href="contribution.html"><h3>Contributions</h3></a>
+                <h2>Follow Nannestad Science Museum</h2>
+                <a class="socmed" href="#" title="Facebook Page">
+                    <img src="images/socmed-icons.png" alt="">
+                </a>
             </ul>
-            </div>
-            <div class="col-1"></div>
-            <ul>
-                <a href="privacy.html"><h3>Privacy Policy</h3></a>
-                <a href="terms.html"><h3>Terms and Conditions</h3></a>
-                <a href="contact.html"><h3>Need help?</h3></a>
-            </ul>
-            <div class="col-1">
-                <ul>
-                    <h2>Follow Nannestad Science Museum</h2>
-                    <img src="images/socmed-icons.png" alt="facebook">
-                </ul>
-            </div>
         </div> 
     </footer>
-    <div class="back-to-top">
-        <a href="#body">Back to Top</a>
-    </div
+
+    <div class="icons">
+        <a class="home" href="index.html" title="Home">
+        <span class="material-icons-round">
+            home
+        </span>
+        </a>
+        
+        <a class="call" href="contact.html" title="Contact Us">
+        <span class="material-icons-round">
+        phone
+        </span>
+        </a>
+
+        <a class="search" href="#" title="Search">
+            <span class="material-icons-round">
+                search
+            </span>
+            </a>
+    
+        <div class="material-icons">
+        <a href="#body" title="Back to Top">
+            <span class="material-symbols-outlined">
+                arrow_upward
+            </span>
+        </a>
+        </div>
+    </div>
 </body>
 </html>
