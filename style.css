@@ -172,15 +172,22 @@ header {
     top: 0;
     right: 0;
     width: 100%;
+    height: 200px;
+}
+.logo {
+  width: fit-content;
+  height: auto;
 }
 .logo img {
-    width: 100%;
-    height: 100%;
+  width: 200px;
+  height: 215px;
+  padding: 10px;
 }
+
 /* Slide Title section */
 
 .hero-title {
-    margin-top: 300px;
+    margin-top: 330px;
 }
 
 .title {
@@ -192,7 +199,7 @@ header {
     bottom: 70px;
 }
 .title h1 {
-    font-size: 5vw;
+    font-size: 3.5vw;
     color: #001ae5;
 }
 .title h1 span {
@@ -208,12 +215,12 @@ header {
     align-items: center;
     width: 30%;
     height: auto;
-    bottom: 30vw;
+    bottom:  330px;
     left: 42vw;
 }
 .right-title a {
     text-decoration: underline;
-    font-size: 2vw;
+    font-size: 18px;
     
 }
 .right-title a:hover {
@@ -237,7 +244,6 @@ main {
     align-items: center;
     justify-content: center;
     padding: 70px;
-    
 }
 .main-title {
     display: flex;
@@ -256,7 +262,7 @@ main {
 }
 .main-text p {
     text-align: justify;
-    font-size: 2vw;
+    font-size: 20px;
     font-weight: lighter;
 }
 .main-text .nan {
@@ -268,13 +274,14 @@ span {
     font-style: italic;
 }
 .main-image {
-  display: flex;
+  width: 100%;
+  height: auto;
   justify-content: center;
+  display: flex;
 }
 .main-image img {
-    width: 100%;
-    height: 100%;
-    padding: 50px 50px;
+    max-width: 600px;
+    padding: 50px;
 }
 
 main a {
@@ -341,14 +348,21 @@ main a {
 /* Create two equal columns that floats next to each other */
 .column {
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 30px 30px; 
     height: auto;
   }
-  .column img {
-    width: 200px;
+  .col-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .col-img img {
+    max-width: 400px;
     height: 100%;
   }
+  
   .row {
     border: 5px solid #001ae5;
     border-radius: 10px;
@@ -356,11 +370,14 @@ main a {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    margin: 50px 0px;
+    margin-top: 50px;
+  }
+  .text {
+    display: block;
+    width: 100%;
   }
   .column p {
-    font-size: 2vw;
+    font-size: 20px;
     line-height: 1.2;
   }
   .column h2 {
@@ -381,17 +398,17 @@ main a {
   }
   .column-news h2 {
     color: #ca1013;
-    font-size: 1vw;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     text-decoration: underline;
   }
   .column-news p{
-    font-size: 1vw;
+    font-size: 12px;
   }
   .column-news {
     font-style: italic;
-    padding: 10px;
+    padding: 30px;
   }
   
   /* Clear floats after the columns */
@@ -403,15 +420,17 @@ main a {
   
   /* Responsive page */
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     .column {
       width: 100%;
     }
   }
 
-  @media screen and (max-width: 700px) {
-    
-
+  @media screen and (max-width: 768px) {
+    .logo img {
+      width: 120px;
+      height: 130px;
+    }
     .icons a, 
     .material-icons span
     {
@@ -425,25 +444,45 @@ main a {
     .icons {
         bottom: 0;
     }
-
     .material-icons a {
         top: 590px;
         padding: 0;
         left: 520px;
     }
-    
     .text-news {
         padding: 0;
         margin: 0;
     }
-    .title  {
-        padding-top: 150px;    
+    .hero-title {
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 430px;
+    }
+    .title {
+      bottom: 20px;
+      left: 30px;
     }
     .right-title {
-        width: 100%;
-        padding-left: 30px;
-        bottom: 230px;
+      margin-top: 170px;
+      width: 100%;
+      left: 300px;
     }
+    .text-news {
+      width: fit-content;
+      display: block;
+    }
+    .column-news {
+      padding: 10px 30px;
+    }
+    .main-image img {
+      max-width: 317px;
+      height: auto;
+    }
+    .col-img img {
+      width: 300px;
+      height: 100%;
+    }
+    
     .hamburger-menu {
         width: 80px;
     }
@@ -503,6 +542,7 @@ main a {
     text-decoration: none;
 }
 
+
  /* Scroll to top button */
  .material-icons a {
     position: fixed;
@@ -536,18 +576,10 @@ footer {
     position: relative;
     color: white;
     width: 100vw; 
-    
 }
 footer .row-footer ul {
-   
    align-items: center;
 }
-.socmed {
-    
-    justify-content: center;
-    align-items: center;
-}
-
 footer h3 {
     font-size: 1.3vw;
 }
@@ -555,6 +587,6 @@ footer li {
   list-style-type: none;
 }
 footer img {
-    width: 10vw;
+    width: 70px;
     height: 100%;
 }

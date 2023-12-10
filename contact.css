@@ -21,17 +21,16 @@ header {
   top: 0;
 }
 header .logo img {
-  width: 10vw;
-  padding-left: 10px;
+  width: 140px;
+  height: 140px;
+  padding-left: 20px;
 }
 .header-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  word-spacing: 5px;
   color: white;
-  font-size: 5vw;
-  text-transform: uppercase;
 }
 /* Sidebar section */
 :root {
@@ -133,33 +132,35 @@ header .logo img {
 
   
    /* Content section */
-   main {
-    align-items: center;
-    justify-content: center;
+   
+   section {
+    padding: 30px 100px;
+    margin: 0;
+   }
+   .hero {
     width: 100%;
-    height: auto;
-    margin-top: 100px;
+    height: 500px;
+    background-image: url(images/map_50.webp);
+    background-size: cover;
+   }
+   h1 {
+    font-size: 5vw;
+    text-transform: uppercase;
    }
    .heading {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
+    padding: 0;
    }
    .heading h1 {
     color: #001ae5;
     font-size: 4vw;
    }
    
-   section {
-    position: relative;
-    padding: 50px 50px;
-    margin: 0 auto;
-   }
-   .text {
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 10px;
+   section .text {
+    padding: 0;
+    margin: 0;
    }
    .text h2 {
       color: #ca1013;
@@ -214,7 +215,7 @@ header .logo img {
     border-radius: 5px;
     background-color: #ca1013;
     padding: 100px 100px;
-    margin-top: 50px;
+    margin: 50px 150px;
   }
   
   label {
@@ -246,24 +247,12 @@ header .logo img {
         padding: 0;
         left: 520px;
     }
-    nav {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-    header {
-      display: flex;
-      height: 100%;
-      justify-content: space-between;
-      align-items: center;
-    }
     .header-title {
       font-size: 20px;
-    }
-    .hamburger-menu {
-      margin: 0;
-      padding: 0;
-    }
+      justify-content: center;
+      width: 100%;
+  }
+    
     .hamburger-menu::before,
     .hamburger-menu::after,
     .hamburger-menu input {
@@ -275,11 +264,13 @@ header .logo img {
       padding-top: 100px;
       
     }
-    main {
-      margin-top: 10px;
+    .hero {
+      width: 100%;
+      height: 300px;
     }
     .container {
-      margin: 0;
+      margin: 50px 100px;
+      padding: 30px;
     }
     
     footer ul {
@@ -358,22 +349,14 @@ footer {
     padding: 40px;
     align-items: center;
     justify-content: center; 
-    
 }
 .row-footer {
     display: block;
     position: relative;
     width: 100vw; 
-    
 }
 footer .row-footer ul {
-   
    align-items: center;
-}
-.socmed {
-    
-    justify-content: center;
-    align-items: center;
 }
 
 footer h2 {
@@ -384,6 +367,6 @@ footer li {
   list-style-type: none;
 }
 footer img {
-  width: 10vw;
+  width: 70px;
   height: 100%;
 }
