@@ -105,7 +105,6 @@ h1 {
     }
     .sidebar {
       transition: translate var(--animation-timing);
-      translate: -100%;
       padding: 3rem;
       background-color: var(--foreground);
       color: var(--background);
@@ -129,6 +128,9 @@ h1 {
       translate: 0;
       display: flex;
     }
+    .hamburger-menu:hover {
+        background-color: #ca1013;
+      }
   
     /* Search bar */
     
@@ -182,55 +184,80 @@ h1 {
         display: table;
       }
      
-    /* Sticky Icons */
+   /* Sticky Icons */
 .icons {
-    background-color: #001ae5;
-    display: flex;
-    position: fixed;
-    bottom: 2.5vw;
-    left: 31vw;
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 6vw;  
-    text-transform: none;
-    word-wrap: break-word;
-    white-space: nowrap;
-    direction: ltr;
-    justify-content: space-between;
-    align-items: center;
-    width: 35vw;
-    height: 100px;
-    padding-left: 50px;
-    border-radius: 10px;
-    
+  background-color: #001ae5;
+  display: flex;
+  position: fixed;
+  bottom: 2.5vw;
+  margin-left: 35vw;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 6vw;  
+  text-transform: none;
+  word-wrap: break-word;
+  white-space: nowrap;
+  direction: ltr;
+  justify-content: space-between;
+  align-items: center;
+  width: 35vw;
+  height: 80px;
+  border-radius: 10px;
+  padding-top: 15px;
+  
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
 
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+/* Support for IE. */
+font-feature-settings: 'liga';
+}
+.icon-bar {
+display: block;
+position: absolute;
+width: 100%;
+}
+.icon-bar a {
+display: inline;
+justify-content: center;
+align-items: center;
+margin-left: 3.5vw;
 }
 .icons a {
     text-decoration: none;
     color: #ca1013;
 }
-
-
- /* Scroll to top button */
- .material-icons a {
-    position: fixed;
-    bottom: 4vw;
-    right: 70px;
-    padding: 10px;
-    font-size: 5vw;
-    z-index: 999;
-}
+.icons span {
+    color: white;
+    font-style: normal;
+  }
+  .icons span:hover {
+    color: #ca1013;
+  }
+  
+   /* Scroll to top button */
+   .material-icons a {
+      background-color: #ca1013;
+      border-radius: 40px;
+      position: fixed;
+      bottom: 4vw;
+      right: 70px;
+      padding: 10px;
+      font-size: 5vw;
+      z-index: 999;
+  }
+  .material-icons a:hover {
+    background-color: white;
+  }
+  .material-icons span:hover {
+    color: #ca1013;
+  }
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -280,24 +307,7 @@ footer img {
     .header-title {
         font-size: 20px;
     }
-    .icons a, 
-    .material-icons span
-    {
-        font-size: 7vw;
-    }
-    .icons a {
-        width: 50px;
-        height: 50px;
-        translate: -10px 5px;
-    }
-    .icons {
-        bottom: 0;
-    }
-    .material-icons a {
-        top: 590px;
-        padding: 0;
-        left: 520px;
-    }
+    
     .hamburger-menu {
         width: 80px;
     }

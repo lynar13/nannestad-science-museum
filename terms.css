@@ -103,7 +103,6 @@ header .logo img {
   }
   .sidebar {
     transition: translate var(--animation-timing);
-    translate: -100%;
     background-color: var(--foreground);
     color: var(--background);
     max-width: 150px;
@@ -130,6 +129,9 @@ header .logo img {
     translate: 0;
     display: flex;
   }
+  .hamburger-menu:hover {
+    background-color: #ca1013;
+  }
 
   /* Main content section */
   main {
@@ -147,7 +149,7 @@ header .logo img {
     font-size: 20px;
   }
   p {
-    font-size: 15;
+    font-size: 15px;
   }
   .heading {
     line-height: 0.2;  
@@ -176,22 +178,6 @@ header .logo img {
 }
 
 @media screen and (max-width: 700px) {
-  .icons a, 
-  .material-icons span
-  {
-      font-size: 7vw;
-  }
-  .icons a {
-      width: 50px;
-      height: 50px;
-      translate: -10px 5px;
-  }
-  .material-icons a {
-      top: 590px;
-      padding: 0;
-      left: 520px;
-  }
-  
   .header-title {
     font-size: 20px;
     justify-content: center;
@@ -206,9 +192,7 @@ header .logo img {
   .sidebar {
     width: 100%;
     padding-top: 100px;
-    
   }
-  
   footer ul {
       margin: 0;
       padding: 0;
@@ -224,7 +208,7 @@ header .logo img {
   display: flex;
   position: fixed;
   bottom: 2.5vw;
-  left: 31vw;
+  margin-left: 35vw;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -236,9 +220,9 @@ header .logo img {
   justify-content: space-between;
   align-items: center;
   width: 35vw;
-  height: 100px;
-  padding-left: 50px;
+  height: 80px;
   border-radius: 10px;
+  padding-top: 15px;
   
 
 /* Support for all WebKit browsers. */
@@ -251,6 +235,17 @@ text-rendering: optimizeLegibility;
 
 /* Support for IE. */
 font-feature-settings: 'liga';
+}
+.icon-bar {
+display: block;
+position: absolute;
+width: 100%;
+}
+.icon-bar a {
+display: inline;
+justify-content: center;
+align-items: center;
+margin-left: 3.5vw;
 }
 .icons a {
   text-decoration: none;
@@ -267,15 +262,31 @@ font-feature-settings: 'liga';
   font-size: 5vw;
   z-index: 999;
 }
-
-.material-symbols-outlined {
-font-variation-settings:
-'FILL' 0,
-'wght' 400,
-'GRAD' 0,
-'opsz' 24
+.icons span {
+  color: white;
+  font-style: normal;
+}
+.icons span:hover {
+  color: #ca1013;
 }
 
+ /* Scroll to top button */
+ .material-icons a {
+    background-color: #ca1013;
+    border-radius: 40px;
+    position: fixed;
+    bottom: 4vw;
+    right: 70px;
+    padding: 10px;
+    font-size: 5vw;
+    z-index: 999;
+}
+.material-icons a:hover {
+  background-color: white;
+}
+.material-icons span:hover {
+  color: #ca1013;
+}
 
 /* Footer section */
 footer {

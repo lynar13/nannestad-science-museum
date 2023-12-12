@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body {
-    background-color: black;
     scroll-behavior: smooth;
-    box-sizing: border-box;
     height: auto;
     margin: 0;
     padding: 0;
@@ -46,7 +49,7 @@ div .slider {
    }
    .slider .slide:nth-child(1) {
     background-image: url("images/heart-2607178_1920.webp");
-    animation-delay: 0;
+    animation-delay: 0s;
   }
   
   .slider .slide:nth-child(2) {
@@ -72,97 +75,6 @@ div .slider {
     color: white;
   }
 
-/* Sidebar section */
-:root {
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
-    --foreground: #3431319e;
-    --background: rgb(7, 7, 7);
-    --hamburger-margin: 10px;
-    --animation-timing: 200ms ease-in-out;
-    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  }
-  .hamburger-menu {
-    --x-width: calc(var(--hamburger-height) * 1.41421356237);
-    display: flex;
-    background-color: #ca1013;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    width: 200px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    cursor: pointer;
-    height: 60px;
-  }
-  .hamburger-menu:has(input:focus-visible)::before,
-  .hamburger-menu:has(input:focus-visible)::after,
-  .hamburger-menu input:focus-visible {
-    border: 1px solid ;
-    box-shadow: 0 0 0 1px ;
-    
-  }
-  .hamburger-menu::before,
-  .hamburger-menu::after,
-  .hamburger-menu input {
-    content: "";
-    width: 60px;
-    height: 7px;
-    background-color: white;
-    border-radius: 9999px;
-    transform-origin: left center;
-    transition: opacity var(--animation-timing), width var(--animation-timing),
-      rotate var(--animation-timing), translate var(--animation-timing),
-      background-color var(--animation-timing);
-  }
-  .hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-  }
-  .hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 1px -8px;
-  }
-  .hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-  }
-  .hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-  }
-  .sidebar {
-    transition: translate var(--animation-timing);
-    translate: -100%;
-    padding: 3rem;
-    background-color: var(--foreground);
-    color: var(--background);
-    max-width: 200px;
-    min-height: 60vh;
-    display: none;
-  }
-  .sidebar li a {
-    font-size: 2vw;
-  }
-  .sidebar li {
-    list-style-type: none;
-    padding: 10px;
-  }
-  .sidebar a:hover {
-    background-color: #ca1013;
-    font-weight: bold;
-  }
-  .hamburger-menu:has(input:checked) + .sidebar {
-    translate: 0;
-    display: flex;
-  }
 
 /* Header/Nav section */
 header {
@@ -175,6 +87,8 @@ header {
     height: 200px;
 }
 .logo {
+  top: 0;
+  right: 0;
   width: fit-content;
   height: auto;
 }
@@ -183,6 +97,106 @@ header {
   height: 215px;
   padding: 10px;
 }
+
+/* Sidebar section */
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #3431319e;
+  --background: rgb(7, 7, 7);
+  --hamburger-margin: 10px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  
+}
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
+  background-color: #ca1013;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: 200px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  height: 50px;
+}
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid;
+  box-shadow: 0 0 0 1px;
+}
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: 7px;
+  background-color: white;
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+.hamburger-menu:has(input:checked)::before 
+{
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 2 calc(var(--bar-height) / 2);
+}
+.hamburger-menu:has(input:checked)::after 
+{
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+.sidebar {
+  translate: -100%;
+  transition: translate var(--animation-timing);
+  padding: 3rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  max-width: max-content;
+  min-height: 70vh;
+  display: none;
+}
+.sidebar li a {
+  font-size: 2vw;
+}
+.sidebar li {
+  list-style-type: none;
+  padding: 10px;
+}
+.sidebar a:hover {
+  background-color: #ca1013;
+  font-weight: bold;
+}
+.hamburger-menu:hover {
+  background-color: #001ae5;
+}
+.hamburger-menu:has(input:checked) + 
+.sidebar 
+{
+  translate: 0;
+  display: flex;
+}
+
 
 /* Slide Title section */
 
@@ -251,11 +265,8 @@ main {
     justify-content: center;
     align-items: center;
     top: 0;
-}
-
-.main-title h1 {
-    font-size: 5vw; 
-    text-transform: uppercase;  
+    font-size: 5vw;
+    text-transform: uppercase;
 }
 .main-text {
     display: block;
@@ -431,24 +442,6 @@ main a {
       width: 120px;
       height: 130px;
     }
-    .icons a, 
-    .material-icons span
-    {
-        font-size: 7vw;
-    }
-    .icons a {
-        width: 50px;
-        height: 50px;
-        translate: -10px 5px;
-    }
-    .icons {
-        bottom: 0;
-    }
-    .material-icons a {
-        top: 590px;
-        padding: 0;
-        left: 520px;
-    }
     .text-news {
         padding: 0;
         margin: 0;
@@ -482,7 +475,6 @@ main a {
       width: 300px;
       height: 100%;
     }
-    
     .hamburger-menu {
         width: 80px;
     }
@@ -490,7 +482,7 @@ main a {
     .hamburger-menu::after,
     .hamburger-menu input {
         width: 40px;
-        height: 5px;
+        height: 10px;
     }
     .sidebar {
         padding: 0;
@@ -510,20 +502,19 @@ main a {
     display: flex;
     position: fixed;
     bottom: 2.5vw;
-    left: 31vw;
+    margin-left: 35vw;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 6vw;  
+    font-size: 5vw;  
     text-transform: none;
     word-wrap: break-word;
     white-space: nowrap;
     direction: ltr;
     justify-content: space-between;
     align-items: center;
-    width: 35vw;
-    height: 100px;
-    padding-left: 50px;
+    width: 30vw;
+    height: 80px;
     border-radius: 10px;
     
 
@@ -538,13 +529,33 @@ main a {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+.icon-bar {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+.icon-bar a {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3.5vw;
+}
 .icons a {
     text-decoration: none;
 }
-
+.icons span {
+  color: white;
+  font-style: normal;
+}
+.icons span:hover {
+  color: #ca1013;
+}
 
  /* Scroll to top button */
  .material-icons a {
+    background-color: #ca1013;
+    border-radius: 40px;
     position: fixed;
     bottom: 4vw;
     right: 70px;
@@ -552,7 +563,12 @@ main a {
     font-size: 5vw;
     z-index: 999;
 }
-
+.material-icons a:hover {
+  background-color: white;
+}
+.material-icons span:hover {
+  color: #ca1013;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
