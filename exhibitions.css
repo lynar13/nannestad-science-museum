@@ -19,10 +19,10 @@ header {
   height: 140px;
   top: 0;
 }
-header .logo img {
-  width: 140px;
-  height: 140px;
-  padding-left: 20px;
+.logo img {
+  width: 120px;
+  height: 130px;
+  padding: 0;
 }
 .header-title {
   display: flex;
@@ -222,17 +222,19 @@ header .logo img {
     }
   }
   .image-row {
-    display: block;
-    width: 45%;
+    display: flex;
     float: left;
-    justify-content: space-between;
+    width: 100%;
+    height: 350px;
+    justify-content: center;
     align-items: center;
-    padding: 40px 10px;
+    margin-bottom: 20px;
   }
   div.image-row img {
-    width: 100%;
-    height: auto;
+    width: 600px;
+    height: 330px;
     border: 10px solid #ca1013;
+    padding: 0;
   }
   
 
@@ -339,7 +341,7 @@ margin-left: 3.5vw;
     background-color: #ca1013;
     border-radius: 40px;
     position: fixed;
-    bottom: 4vw;
+    bottom: 30px;
     right: 70px;
     padding: 10px;
     font-size: 5vw;

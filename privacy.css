@@ -21,10 +21,10 @@ header {
   height: 140px;
   top: 0;
 }
-header .logo img {
-  width: 140px;
-  height: 140px;
-  padding-left: 20px;
+.logo img {
+  width: 120px;
+  height: 130px;
+  padding: 0;
 }
 .header-title {
   display: flex;
@@ -266,7 +266,7 @@ margin-left: 3.5vw;
     background-color: #ca1013;
     border-radius: 40px;
     position: fixed;
-    bottom: 4vw;
+    bottom: 30px;
     right: 70px;
     padding: 10px;
     font-size: 5vw;
