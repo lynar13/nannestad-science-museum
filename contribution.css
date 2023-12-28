@@ -20,8 +20,8 @@ header {
   top: 0;
 }
 .logo img {
-  width: 140px;
-  height: auto;
+  width: 120px;
+  height: 130px;
   padding: 0;
 }
 .header-title {
@@ -146,21 +146,21 @@ header {
     justify-content: center;
     color: #001ae5;
    }
-  .heading {
-      display: block;
-      width: 100%;
-      
-  }
+  
   h1 {
     display: flex;
     color: #ca1013;
     font-weight: bold;
     font-size: 5vw;
     text-transform: uppercase;
-    
   }
-  .heading img {
+  .heading {
+    display: block;
+    width: 100vw; 
     height: auto;
+}
+  .heading img {
+    height: 400px;
     width: 100%;
   }
   
@@ -221,7 +221,8 @@ header {
     
   }
   .heading img {
-    height: 300px;
+    width: 100%;
+    height: auto;
   }
   .container {
     margin: 0;

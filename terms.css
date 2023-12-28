@@ -21,9 +21,9 @@ header {
   top: 0;
 }
 header .logo img {
-  width: 140px;
-  height: 140px;
-  padding-left: 20px;
+  width: 120px;
+  height: 130px;
+  padding: 0;
 }
 .header-title {
   display: flex;

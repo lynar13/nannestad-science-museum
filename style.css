@@ -146,7 +146,7 @@ header {
 {
   rotate: 45deg;
   width: var(--x-width);
-  translate: 2 calc(var(--bar-height) / 2);
+  translate: 1px -8px;
 }
 .hamburger-menu:has(input:checked)::after 
 {
@@ -237,25 +237,24 @@ header {
     padding: 10px;
 }
 section {
-   flex-grow: 1;
+   margin: 0;
+   padding: 0;
 }
 
 /* Main content */
 main {
-    display: block;
-    position: relative;
     background-color: #f9f4f4;
     color: rgb(79, 66, 66);
     align-items: center;
     justify-content: center;
-    padding: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .main-title {
     display: flex;
     color: #001ae5;
     justify-content: center;
     align-items: center;
-    top: 0;
     font-size: 5vw;
     text-transform: uppercase;
 }
@@ -282,7 +281,8 @@ span {
   display: flex;
 }
 .main-image img {
-  width: 600px;
+  max-width: 600px;
+  height: 300px;
 }
 
 main a {
@@ -391,11 +391,13 @@ main a {
     background-color: #ca1013;
     color: white;
     padding: 50px 700px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
   .text-news {
     border: 5px solid #ca1013;
     width: 100%;
+    margin-bottom: 50px;
+    margin-top: 10px;
   }
   .column-news h2 {
     color: #ca1013;
@@ -432,23 +434,22 @@ main a {
       width: 120px;
       height: 130px;
     }
-    .text-news {
-        padding: 0;
-        margin: 0;
-    }
     .hero-title {
       justify-content: space-between;
-      width: 100%;
       margin-top: 430px;
     }
     .title {
       bottom: 20px;
       left: 30px;
     }
-    .right-title {
-      margin-top: 170px;
-      width: 100%;
-      left: 300px;
+    .right-title ul {
+      padding-top: 150px;
+    }
+    .right-title li {
+      padding: 5px;
+    }
+    .right-title a {
+      font-size: 15px;
     }
     .text-news {
       width: fit-content;
@@ -457,22 +458,31 @@ main a {
     .column-news {
       padding: 10px 30px;
     }
+    .main-title {
+      margin: 0;
+      padding: 0;
+    }
     .main-image img {
-      max-width: 317px;
-      height: 100%;
+      max-width: 600px;
+      height: 300px;
+    }
+    .col-img {
+      width: 100%;
+      height: auto;
+      padding: 0;
     }
     .col-img img {
-      width: 200px;
+      max-width: 400px;
       height: 100%;
     }
     .hamburger-menu {
-        width: 80px;
+        width: 70px;
+        display: flex;
     }
     .hamburger-menu::before,
     .hamburger-menu::after,
     .hamburger-menu input {
         width: 40px;
-        height: 10px;
     }
     .sidebar {
         padding: 0;
