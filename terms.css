@@ -113,7 +113,6 @@ header .logo img {
     padding-right: 20px;
   }
   .sidebar li a {
-    font-size: 1.7vw;
     color: white;
     text-decoration: none;
   }
@@ -138,7 +137,7 @@ header .logo img {
     display: block;
     color: rgb(47, 44, 44);
     font-family: 'Open Sans', sans-serif;
-    padding: 30px 100px;
+    padding: 30px 50px;
     margin-bottom: 50px;
   }
   h1 {
@@ -193,6 +192,9 @@ header .logo img {
     width: 100%;
     padding-top: 100px;
   }
+  .icon-bar, .material-icons a {
+    font-size: 45px;
+   }
   footer ul {
       margin: 0;
       padding: 0;
@@ -219,8 +221,8 @@ header .logo img {
   direction: ltr;
   justify-content: space-between;
   align-items: center;
-  width: 35vw;
-  height: 80px;
+  width: 60%;
+  height: 90px;
   border-radius: 10px;
   padding-top: 15px;
   
@@ -255,11 +257,13 @@ margin-left: 3.5vw;
 
 /* Scroll to top button */
 .material-icons a {
+  background-color: #ca1013;
+  border-radius: 40px;
   position: fixed;
-  bottom: 4vw;
+  bottom: 45px;
   right: 70px;
   padding: 10px;
-  font-size: 5vw;
+  font-size: 4vw;
   z-index: 999;
 }
 .icons span {
@@ -268,18 +272,6 @@ margin-left: 3.5vw;
 }
 .icons span:hover {
   color: #ca1013;
-}
-
- /* Scroll to top button */
- .material-icons a {
-    background-color: #ca1013;
-    border-radius: 40px;
-    position: fixed;
-    bottom: 30px;
-    right: 70px;
-    padding: 10px;
-    font-size: 5vw;
-    z-index: 999;
 }
 .material-icons a:hover {
   background-color: white;
@@ -300,13 +292,13 @@ footer {
 .row-footer {
   display: block;
   position: relative;
-  width: 100vw; 
+  width: 100%; 
 }
 footer .row-footer ul {
  align-items: center;
 }
 footer h3 {
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   color: white;
 }
 footer li {
