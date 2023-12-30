@@ -229,6 +229,9 @@ header {
   .icon-bar, .material-icons a {
     font-size: 45px;
    }
+   .icons {
+    max-width: 350px;
+   }
   footer ul {
       margin: 0;
       padding: 0;
@@ -243,22 +246,19 @@ header {
   background-color: #001ae5;
   display: flex;
   position: fixed;
-  bottom: 2.5vw;
-  margin-left: 35vw;
+  bottom: 40px;
+  margin-left: 50px;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 6vw;  
+  font-size: 5vw;  
   text-transform: none;
   word-wrap: break-word;
   white-space: nowrap;
   direction: ltr;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
+  width: 400px;
   height: 90px;
   border-radius: 10px;
-  padding-top: 15px;
   
 
 /* Support for all WebKit browsers. */
@@ -273,19 +273,17 @@ text-rendering: optimizeLegibility;
 font-feature-settings: 'liga';
 }
 .icon-bar {
-display: block;
-position: absolute;
-width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
-.icon-bar a {
-display: inline;
-justify-content: center;
-align-items: center;
-margin-left: 3.5vw;
+.icons .icon-bar a {
+ margin-left: 50px;
+ justify-content: center;
 }
 .icons a {
-  text-decoration: none;
-  color: #ca1013;
+    text-decoration: none;
 }
 .icons span {
   color: white;
@@ -300,10 +298,10 @@ margin-left: 3.5vw;
     background-color: #ca1013;
     border-radius: 40px;
     position: fixed;
-    bottom: 45px;
-    right: 70px;
+    bottom: 55px;
+    right: 50px;
     padding: 10px;
-    font-size: 4vw;
+    font-size: 3vw;
     z-index: 999;
 }
 .material-icons a:hover {
@@ -326,26 +324,8 @@ footer {
   background-color: black;
   width: 100%;
   height: auto;
-  padding: 40px;
+  padding: 80px;
   align-items: center;
   justify-content: center; 
 }
-.row-footer {
-  display: block;
-  position: relative;
-  width: 100vw; 
-}
-footer .row-footer ul {
- align-items: center;
-}
-footer h3 {
-  font-size: 10px;
-  color: white;
-}
-footer li {
-  list-style-type: none;
-}
-footer img {
-  width: 70px;
-  height: 100%;
-}
+

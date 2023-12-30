@@ -505,11 +505,11 @@ main a {
     .icon-bar, .material-icons a {
       font-size: 45px;
      }
-    footer ul {
-       margin: 0;
-       padding: 0;
-    }
-    
+     .icons {
+      max-width: 350px;
+     }
+       
+       
 }
  
 
@@ -518,8 +518,8 @@ main a {
     background-color: #001ae5;
     display: flex;
     position: fixed;
-    bottom: 2.5vw;
-    margin-left: 20vw;
+    bottom: 40px;
+    margin-left: 50px;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -528,9 +528,7 @@ main a {
     word-wrap: break-word;
     white-space: nowrap;
     direction: ltr;
-    justify-content: space-between;
-    align-items: center;
-    width: 360px;
+    width: 400px;
     height: 90px;
     border-radius: 10px;
     
@@ -547,16 +545,14 @@ main a {
   font-feature-settings: 'liga';
 }
 .icon-bar {
-  align-items: center;
-  justify-content: center;
   display: flex;
   position: relative;
-}
-.icon-bar a {
-  display: inline;
   justify-content: center;
   align-items: center;
-  margin-left: 3.5vw;
+}
+.icons .icon-bar a {
+ margin-left: 50px;
+ justify-content: center;
 }
 .icons a {
     text-decoration: none;
@@ -574,8 +570,8 @@ main a {
     background-color: #ca1013;
     border-radius: 40px;
     position: fixed;
-    bottom: 45px;
-    right: 150px;
+    bottom: 55px;
+    right: 50px;
     padding: 10px;
     font-size: 3vw;
     z-index: 999;
