@@ -519,7 +519,7 @@ main a {
     display: flex;
     position: fixed;
     bottom: 2.5vw;
-    margin-left: 35vw;
+    margin-left: 20vw;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -530,7 +530,7 @@ main a {
     direction: ltr;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 360px;
     height: 90px;
     border-radius: 10px;
     
@@ -575,7 +575,7 @@ main a {
     border-radius: 40px;
     position: fixed;
     bottom: 45px;
-    right: 70px;
+    right: 150px;
     padding: 10px;
     font-size: 3vw;
     z-index: 999;
@@ -600,26 +600,8 @@ footer {
     background-color: black;
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 80px;
     align-items: center;
     justify-content: center; 
 }
-.row-footer {
-    display: block;
-    position: relative;
-    color: white;
-    width: 100vw; 
-}
-footer .row-footer ul {
-   align-items: center;
-}
-footer h3 {
-    font-size: 1.3vw;
-}
-footer li {
-  list-style-type: none;
-}
-footer img {
-    width: 70px;
-    height: 100%;
-}
+
