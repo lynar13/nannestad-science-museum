@@ -192,24 +192,26 @@ header .logo img {
     width: 100%;
     padding-top: 100px;
   }
-  .icon-bar, .material-icons a {
+  .icons a {
     font-size: 45px;
    }
-   .icons {
-    max-width: 350px;
+  .material-icons a {
+    margin-bottom: 110px;
    }
-  
-  
+   .icons {
+      width: 100vw;
+      display: block;
+   }
 }
 
 
 /* Sticky Icons */
 .icons {
-  background-color: #001ae5;
+  background-color: #0e0e10;
   display: flex;
   position: fixed;
   bottom: 40px;
-  margin-left: 50px;
+  margin-left: 0;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -218,7 +220,7 @@ header .logo img {
   word-wrap: break-word;
   white-space: nowrap;
   direction: ltr;
-  width: 400px;
+  width: 100%;
   height: 90px;
   border-radius: 10px;
 
@@ -235,13 +237,13 @@ font-feature-settings: 'liga';
 }
 .icon-bar {
   display: flex;
-  position: relative;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 }
 .icons .icon-bar a {
- margin-left: 50px;
- justify-content: center;
+  display: flex;
+  margin-left: 50px;
 }
 .icons a {
     text-decoration: none;
@@ -260,8 +262,9 @@ font-feature-settings: 'liga';
     border-radius: 40px;
     position: fixed;
     bottom: 55px;
-    right: 50px;
+    right: 0;
     padding: 10px;
+    margin-right: 60px;
     font-size: 3vw;
     z-index: 999;
 }
