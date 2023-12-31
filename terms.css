@@ -141,14 +141,14 @@ header .logo img {
     margin-bottom: 50px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
   }
   h2 {
-    font-size: 20px;
+    font-size: 15px;
   }
   p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .heading {
     line-height: 0.2;  
@@ -207,7 +207,7 @@ header .logo img {
 
 /* Sticky Icons */
 .icons {
-  background-color: #0e0e10;
+  background-color: #001ae5;
   display: flex;
   position: fixed;
   bottom: 40px;
