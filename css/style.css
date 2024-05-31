@@ -1,0 +1,415 @@
+/* General Styles */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, a, p {
+  color: #363732;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 50pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4c7c7;
+  padding: 10px 40px;
+}
+
+nav .logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  font-size: 30pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+.nav-links a:hover {
+  background-color: red;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px red;
+  border-radius: 16px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Styles for showing the menu when toggled */
+.nav-links.show {
+  color: #333;
+  display: flex;
+}
+
+.hero {
+  background-color: #001ae5;
+  padding: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  padding: 30px;
+}
+
+.hero-text ul {
+  list-style: none;
+}
+
+.hero-text ul li {
+  padding: 10px 0;
+}
+
+.hero-text ul li a {
+
+  border-radius: 16px;
+  color: white;
+  background-color: red;
+  text-decoration: none;
+}
+
+.hero-text ul li a:hover {
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px black;
+  border-radius: 16px;
+}
+.title {
+  font-size: 40pt;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
+}
+
+.title h1 {
+  color: red;
+}
+
+.title span {
+  color: blue;
+}
+
+.title-heading {
+  color: blue;
+  padding: 0;
+}
+
+.title-heading,
+.main-title,
+.text-news {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.main-text,
+.column.text,
+.column-news {
+  margin: 1em;
+}
+
+.main-text,
+.main-image,
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-image img {
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+button {
+  border-radius: 8px;
+  background-color: red;
+  margin: 2em 0;
+  font-size: 10pt;
+  font-weight: bold;
+  color: white;
+  padding: 1em 2em;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.learn-more button:hover {
+  background-color: #555;
+}
+
+.explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  cursor: pointer;
+}
+
+.explore img {
+  width: 100%;
+}
+
+.news {
+  color: red;
+}
+
+.text-news {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.explore h2 {
+  font-size: 40pt;
+  color: #363732;
+}
+
+.text-news h2 {
+  font-size: 20pt;
+  color: #363732;
+}
+
+.text-news p {
+  font-size: small;
+  font-style: italic;
+  width: 100%;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    position: relative;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 15pt;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #363732;
+  }
+
+  .hero img {
+    height: auto;
+  }
+
+  .title h1 {
+    font-size: 25pt;
+    color: red;
+  }
+
+  .text-news {
+    display: block;
+  }
+
+  .text-news .column-news {
+    margin: 1em 0;
+  }
+
+  .main-text,
+  .main-image,
+  .button {
+    text-align: center;
+  }
+
+  .main-image img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 20pt;
+  }
+
+  .hero img {
+    height: auto;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    position: relative;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 15pt;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #363732;
+  }
+
+  .text-news {
+    display: block;
+  }
+
+  .text-news .column-news {
+    margin: 1em 0;
+  }
+
+  .main-text,
+  .main-image,
+  .button {
+    text-align: center;
+  }
+
+  .main-image img {
+    max-width: 100%;
+  }
+}
+
+
+/* Footer section */
+footer {
+  background-color: #040404;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding: 10px;
+  color: white;
+}
+
+footer .footer-logo img {
+  width: 80px;
+}
+
+footer .footer-text {
+  margin-top: 10px;
+}
+
+footer .copy {
+  margin-top: 10px;
+}
+
+/* Back to Top and Scroll Down Buttons */
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+  z-index: 1000;
+}
+
+#back-to-top {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 250px;
+}
+
+#scroll-down {
+  bottom: 20px;
+}
+
+.scroll-btn:hover {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+}

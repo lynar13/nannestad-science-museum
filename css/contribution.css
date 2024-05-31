@@ -1,0 +1,255 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, a, p {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 50pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+h3 {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4c7c7;
+  padding: 10px 40px;
+}
+
+nav .logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  font-size: 30pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+.nav-links a:hover {
+  background-color: red;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px red;
+  border-radius: 16px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Styles for showing the menu when toggled */
+.nav-links.show {
+  color: #333;
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+}
+
+   /* Heading section */
+   section {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .title {
+      justify-content: center;
+      padding: 50px;
+   }
+   .title {
+    display: flex;
+    font-size: 4vw;
+    justify-content: center;
+    color: #001ae5;
+   }
+  
+  .heading {
+    display: block;
+    width: 100vw; 
+    height: auto;
+  }
+
+  .heading h2 {
+    font-size: 60pt;
+  }
+  
+  
+  /* Main content */
+  
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    color: #1f1d1d;
+    position: relative;
+    padding: 50px;
+  }
+  .support {
+    background-color: #f9f4f4;
+  }
+  .volunteer {
+    background-color: rgb(235, 232, 213);
+  }
+  .internships {
+    background-color: #e4d6d7;
+  }
+
+ /* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    position: relative;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 15pt;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #363732;
+  }
+  
+}
+
+@media (max-width: 480px) {
+ 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    position: relative;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 15pt;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #363732;
+  }
+}
+
+/* Footer section */
+footer {
+  background-color: #040404;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding: 10px;
+  color: white;
+}
+
+footer .footer-logo img {
+  width: 80px;
+}
+
+footer .footer-text {
+  margin-top: 10px;
+}
+
+footer .copy {
+  margin-top: 10px;
+}
+
+
+/* Back to Top and Scroll Down Buttons */
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+  z-index: 1000;
+}
+
+#back-to-top {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 250px;
+}
+
+#scroll-down {
+  bottom: 20px;
+}
+
+.scroll-btn:hover {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+}

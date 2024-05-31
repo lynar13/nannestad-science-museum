@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, a, p {
+  color: #363732;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 30pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4c7c7;
+  padding: 10px 40px;
+}
+
+nav .logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  font-size: 30pt;
+  font-family: 'Just Another Hand';
+  color: blue;
+}
+
+.nav-links a:hover {
+  background-color: red;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px red;
+  border-radius: 16px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Styles for showing the menu when toggled */
+.nav-links.show {
+  color: #333;
+  display: flex;
+}
+
+/* Main content section */
+  main {
+    display: block;
+    color: rgb(47, 44, 44);
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 50px;
+    margin-bottom: 50px;
+  }
+  
+ section {
+    padding: 3px 0;
+ }
+ .list {
+    font-size: 12px;
+ }
+ .text span {
+    color: #ca1013;
+    font-style: italic;
+    font-weight: bold;
+ }
+
+ .heading p {
+  font-size: small;
+  font-style: italic;
+ }
+
+ /* Footer section */
+footer {
+  background-color: #040404;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding: 10px;
+  color: white;
+}
+
+footer .footer-logo img {
+  width: 80px;
+}
+
+footer .footer-text {
+  margin-top: 10px;
+}
+
+footer .copy {
+  margin-top: 10px;
+}
+
+/* Back to Top and Scroll Down Buttons */
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+  z-index: 1000;
+}
+
+#back-to-top {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  bottom: 250px;
+}
+
+#scroll-down {
+  bottom: 20px;
+}
+
+.scroll-btn:hover {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    position: relative;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 15pt;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #363732;
+  }
+
+  .container {
+    margin: 50px 50px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 30pt;
+  }
+
+  .text img {
+    width: 100%;
+  }
+
+  .container {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+}
+
