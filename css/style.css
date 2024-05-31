@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
@@ -29,16 +30,16 @@ img {
 }
 
 nav {
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f4c7c7;
-  padding: 10px 40px;
+  padding: 10px 20px;
 }
 
 nav .logo img {
-  height: 100px;
+  height: 80px;
 }
 
 .nav-links {
@@ -48,7 +49,7 @@ nav .logo img {
 }
 
 .nav-links a {
-  font-size: 30pt;
+  font-size: 20pt;
   font-family: 'Just Another Hand';
   color: blue;
 }
@@ -67,16 +68,17 @@ nav .logo img {
 
 /* Styles for showing the menu when toggled */
 .nav-links.show {
-  color: #333;
   display: flex;
 }
 
 .hero {
   background-color: #001ae5;
-  padding: 50px;
-  position: relative;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
+  position: relative;
 }
 
 .hero img {
@@ -86,7 +88,9 @@ nav .logo img {
 }
 
 .hero-text {
+  text-align: center;
   padding: 30px;
+  padding-right: 60px;
 }
 
 .hero-text ul {
@@ -94,14 +98,14 @@ nav .logo img {
 }
 
 .hero-text ul li {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .hero-text ul li a {
-
   border-radius: 16px;
   color: white;
   background-color: red;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
@@ -111,14 +115,16 @@ nav .logo img {
   box-shadow: 0 8px 16px black;
   border-radius: 16px;
 }
+
 .title {
-  font-size: 40pt;
+  font-size: 30pt;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5); 
-  border-radius: 10px; 
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .title h1 {
@@ -134,35 +140,44 @@ nav .logo img {
   padding: 0;
 }
 
-.title-heading,
-.main-title,
-.text-news {
+.title-heading, .main-title, .text-news {
   text-align: center;
   margin: 0 auto;
   width: 100%;
 }
 
 main {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  width: 100%;
+  padding: 50px;
+}
+.welcome-text {
+  margin-bottom: 30px;
+}
+.welcome-text p {
+  color: #363732;
+}
+.main-image, .main-text {
+  background-color: #001ae5;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
-.main-text,
-.column.text,
-.column-news {
-  margin: 1em;
+.main-text h3 {
+  font-size: 40pt;
+  font-family: 'Just Another Hand';
 }
 
-.main-text,
-.main-image,
+.main-text h3, p{
+  color: white;
+}
+
+.main-text, 
+.main-image, 
+.text-news, 
 .button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .main-image img {
@@ -189,35 +204,31 @@ button {
 }
 
 .learn-more button:hover {
-  background-color: #555;
-}
-
-.explore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px red;
+  border-radius: 16px;
   cursor: pointer;
 }
 
-.explore img {
-  width: 100%;
-}
-
-.news {
-  color: red;
-}
-
 .text-news {
+  border-radius: 16px;
+  background-color: #001ae5;
   display: block;
   justify-content: center;
   align-items: center;
   max-width: 500px;
+  margin: 50px auto;
+  padding: 10px;
 }
 
-.explore h2 {
-  font-size: 40pt;
-  color: #363732;
+.text-news h4 {
+  font-size: 50px;
+  color: red;
+  font-family: 'Just Another Hand';
+}
+
+.text-news p, .text-news h5 {
+  color: white;
 }
 
 .text-news h2 {
@@ -230,6 +241,7 @@ button {
   font-style: italic;
   width: 100%;
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
@@ -238,7 +250,7 @@ button {
     gap: 0;
     background-color: #333;
     position: relative;
-    top: 60px;
+    top: 20px;
     right: 0;
     width: 100%;
     text-align: center;
@@ -321,27 +333,7 @@ button {
     display: block;
     color: #363732;
   }
-
-  .text-news {
-    display: block;
-  }
-
-  .text-news .column-news {
-    margin: 1em 0;
-  }
-
-  .main-text,
-  .main-image,
-  .button {
-    text-align: center;
-  }
-
-  .main-image img {
-    max-width: 100%;
-  }
 }
-
-
 /* Footer section */
 footer {
   background-color: #040404;
@@ -349,6 +341,7 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
 .footer-text {
   display: flex;
   flex-direction: column;
@@ -411,5 +404,4 @@ footer .copy {
     font-size: 12px;
     padding: 8px 16px;
   }
-  
 }
