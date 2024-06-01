@@ -183,7 +183,7 @@ img {
 
 /* Footer section */
 footer {
-  background-color: #040404;
+  background-color: #f4c7c7;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -197,7 +197,7 @@ footer {
 
 footer a {
   padding: 10px;
-  color: white;
+  color: #363732;
 }
 
 footer .footer-logo img {
