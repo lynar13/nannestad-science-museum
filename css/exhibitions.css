@@ -11,14 +11,19 @@ h1, h2, h3, h4, a, p {
 }
 
 h2 {
-  font-size: 50pt;
+  font-size: 40pt;
   font-family: 'Just Another Hand';
-  color: blue;
+  color: red;
 }
 
 a {
   text-decoration: none;
   list-style-type: none;
+}
+
+.exhibition-section h1 {
+  color: blue;
+  font-family: 'Just Another Hand';
 }
 
 nav {
@@ -64,17 +69,44 @@ nav .logo img {
   display: flex;
 }
 
-img {
-  max-width: 100%;
+/* Content section */
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  margin: 0;
+  padding: 0;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
 }
 
 .exhibition-section {
-  padding: 70px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .exhibition-section img {
-  border-radius: 8px;
-  padding-top: 20px;
+  border-radius: 16px;
+  max-width: 400px;
+  height: 300px;
+  margin: 30px;
 }
 
 .exhibition-section:hover img {
@@ -84,8 +116,9 @@ img {
   cursor: pointer;
 }
 
-.hero h2 {
+.exhibition-section h1 {
   text-align: center;
+  font-size: 50pt;
 }
 
 .exhibition-section h2 {
@@ -145,35 +178,10 @@ img {
     height: auto;
   }
 
-  .title h1 {
-    font-size: 25pt;
-    color: red;
-  }
-
-  .text-news {
-    display: block;
-  }
-
-  .text-news .column-news {
-    margin: 1em 0;
-  }
-
-  .main-text,
-  .main-image,
-  .button {
-    text-align: center;
-  }
-
-  .main-image img {
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
-  .title h1 {
-    font-size: 20pt;
-  }
-
+  
   .hero img {
     height: auto;
   }
