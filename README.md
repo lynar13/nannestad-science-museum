@@ -1,5 +1,7 @@
 # nannestad-science-museum
 
+![image](https://github.com/lynar13/image-hosting/blob/main/nsm.png?raw=true)
+
 Welcome to the Nannestad Science Museum website repository. This repository contains the source code for the Nannestad Science Museum's official website.
 
 ## Table of Contents
