@@ -4,7 +4,7 @@
 
 Welcome to the Nannestad Science Museum website repository. This repository contains the source code for the Nannestad Science Museum's official website.
 
-## Table of Contents
+## 📃 Table of Contents 
 
 - [Overview](#overview)
 - [Features](#features)
@@ -14,11 +14,11 @@ Welcome to the Nannestad Science Museum website repository. This repository cont
 - [Contributing](#contributing)
 - [Contact](#contact)
 
-## Overview
+## 🏛️ Overview 
 
 The Nannestad Science Museum website is designed to provide information about the museum's exhibits, events, and services. It offers an engaging user experience with responsive design and accessibility features.
 
-## Features
+## 🪐 Features 
 
 - **Home Page:** Introduction to the museum and its mission.
 - **Exhibitions:** Information about current and upcoming exhibitions.
@@ -27,7 +27,7 @@ The Nannestad Science Museum website is designed to provide information about th
 - **Responsive Design:** Optimized for both desktop and mobile devices.
 - **Accessibility:** WCAG compliant to ensure accessibility for all users.
 
-## Technologies Used
+## ⚛️ Technologies Used 
 
 - **HTML5:** Structure of the website.
 - **CSS3:** Styling and layout.
